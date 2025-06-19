@@ -187,35 +187,37 @@ def resolve_address(addr: str) -> List[str]:
 
 
 @app.command()
-def add(addr: str, name: Optional[str] = None):
+def add(addr: str, name: Optional[str] = None, bypass_vpn: bool = False):
     """
     Добавить домен или IP в базу
+    
+    Args:
+        addr: IP-адрес или доменное имя
+        name: Имя для удобства (опционально)
+        bypass_vpn: Если True, трафик к этому адресу пойдет в обход VPN
     """
     addresses = load_addresses()
     
     # Проверка на существование
-    if any(a.get('name') == name for a in addresses['addresses']):
+    if name and any(a.get('name') == name for a in addresses['addresses']):
         typer.echo(f"⚠️ Адрес с именем {name} уже существует")
         return
     
-    # Получение типа адреса
+    # Определяем тип адреса
     try:
         socket.inet_aton(addr)
-        address_type = "ip"
+        addr_type = "ip"
     except OSError:
-        address_type = "domain"
+        addr_type = "domain"
     
-    new_address = {
-        "name": name or addr,
-        "type": address_type,
-        "address": addr,
-        "added_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "resolved_ips": []
-    }
-    
-    addresses['addresses'].append(new_address)
+    addresses['addresses'].append({
+        'name': name,
+        'address': addr,
+        'type': addr_type,
+        'bypass_vpn': bypass_vpn
+    })
     save_addresses(addresses)
-    typer.echo(f"✅ Добавлено: {new_address['name']} ({addr})")
+    typer.echo(f"✅ Адрес {addr} добавлен" + (" (в обход VPN)" if bypass_vpn else ""))
 
 
 @app.command()
@@ -224,17 +226,15 @@ def list():
     Показать список доменов/IP в базе
     """
     addresses = load_addresses()
+    
     if not addresses['addresses']:
-        typer.echo("📭 База пуста.")
-    else:
-        typer.echo("📚 Адреса в базе:")
-        for i, addr in enumerate(addresses['addresses'], 1):
-            typer.echo(f"{i:>2}. {addr['name']} ({addr['address']})")
-            if addr['resolved_ips']:
-                typer.echo(f"    Решенные IP: {', '.join(addr['resolved_ips'])}")
-            typer.echo(f"    Тип: {addr['type']}")
-            typer.echo(f"    Добавлен: {addr['added_at']}")
-            typer.echo()
+        typer.echo("В базе нет адресов")
+        return
+    
+    for i, addr in enumerate(addresses['addresses'], 1):
+        resolved = f" -> {', '.join(addr.get('resolved_ips', []))}" if 'resolved_ips' in addr else ""
+        bypass = " (в обход VPN)" if addr.get('bypass_vpn') else ""
+        typer.echo(f"{i}. {addr['name'] or 'Без имени'}: {addr['address']} ({addr['type']}){resolved}{bypass}")
 
 
 @app.command()
@@ -257,7 +257,11 @@ def generate(version: Optional[str] = None):
         for ip in resolved_ips:
             if ip not in seen_ips:
                 seen_ips.add(ip)
-                route_lines.append(f"route {ip} 255.255.255.255")
+                # Если адрес помечен как обход VPN, добавляем маршрут через шлюз по умолчанию
+                if addr.get('bypass_vpn'):
+                    route_lines.append(f"route {ip} 255.255.255.255 net_gateway")
+                else:
+                    route_lines.append(f"route {ip} 255.255.255.255")
 
     # Сохраняем обновленные адреса с разрешенными IP
     save_addresses(addresses)
