@@ -63,6 +63,8 @@ htmlcov/
 
 # opnvpn configs
 *.opnvpn
+*.ovpn
+
 
 # Configs
 configs/
