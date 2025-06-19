@@ -1,0 +1,5 @@
+typer>=0.9.0
+python-dotenv>=1.0.0
+PyYAML>=6.0
+loguru>=0.7.0
+logfire>=0.1.0
