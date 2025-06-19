@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Environment variables
+.env
+.env.local
+
+# Configuration backups
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test coverage
+htmlcov/
+.coverage
+.coverage.*
+.coverage.xml
+
+# Database
+*.db
+*.sqlite3
+
+# opnvpn configs
+*.opnvpn
+*.ovpn
+
+
+# Configs
+configs/
+configs/base/*.ovpn
+configs/certs/*.pem
+configs/new_configs/*.ovpn
+configs/addresses.yaml
