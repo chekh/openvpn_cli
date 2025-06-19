@@ -1,0 +1,242 @@
+addresses:
+- added_at: '2025-06-19 13:36:20'
+  address: google.com
+  name: Google General
+  resolved_ips:
+  - 74.125.131.100
+  - 74.125.131.113
+  - 74.125.131.138
+  - 74.125.131.102
+  - 74.125.131.101
+  - 74.125.131.139
+  type: domain
+- added_at: '2025-06-19 13:48:12'
+  address: windsurf.com
+  name: Windsurf
+  resolved_ips:
+  - 76.76.21.21
+  type: domain
+- added_at: '2025-06-19 13:48:43'
+  address: grok.com
+  name: Grok
+  resolved_ips:
+  - 188.114.99.231
+  - 188.114.98.231
+  type: domain
+- added_at: '2025-06-19 13:48:54'
+  address: chatgpt.com
+  name: ChatGPT
+  resolved_ips:
+  - 188.114.98.231
+  - 188.114.99.231
+  type: domain
+- added_at: '2025-06-19 13:49:18'
+  address: openai.com
+  name: OpenAI
+  resolved_ips:
+  - 104.18.33.45
+  - 172.64.154.211
+  type: domain
+- added_at: '2025-06-19 14:21:54'
+  address: github.com
+  name: GitHub
+  resolved_ips:
+  - 140.82.121.4
+  type: domain
+- added_at: '2025-06-19 14:22:25'
+  address: youtube.com
+  name: YouTube
+  resolved_ips:
+  - 209.85.233.190
+  - 209.85.233.136
+  - 209.85.233.91
+  - 209.85.233.93
+  type: domain
+- added_at: '2025-06-19 14:29:27'
+  address: facebook.com
+  name: Facebook
+  resolved_ips:
+  - 157.240.205.35
+  type: domain
+- added_at: '2025-06-19 14:29:27'
+  address: instagram.com
+  name: Instagram
+  resolved_ips:
+  - 157.240.205.174
+  type: domain
+- added_at: '2025-06-19 14:29:28'
+  address: twitter.com
+  name: X (Twitter)
+  resolved_ips:
+  - 172.66.0.227
+  type: domain
+- added_at: '2025-06-19 14:29:28'
+  address: discord.com
+  name: Discord
+  resolved_ips:
+  - 162.159.128.233
+  - 162.159.137.232
+  - 162.159.135.232
+  - 162.159.138.232
+  - 162.159.136.232
+  type: domain
+- added_at: '2025-06-19 14:29:28'
+  address: pinterest.com
+  name: Pinterest
+  resolved_ips:
+  - 151.101.192.84
+  - 151.101.64.84
+  - 151.101.0.84
+  - 151.101.128.84
+  type: domain
+- added_at: '2025-06-19 14:29:29'
+  address: snapchat.com
+  name: Snapchat
+  resolved_ips:
+  - 34.149.46.130
+  type: domain
+- added_at: '2025-06-19 14:29:29'
+  address: linkedin.com
+  name: LinkedIn
+  resolved_ips:
+  - 150.171.22.12
+  type: domain
+- added_at: '2025-06-19 14:29:29'
+  address: aws.amazon.com
+  name: Amazon AWS
+  resolved_ips:
+  - 18.244.146.71
+  - 18.244.146.57
+  - 18.244.146.61
+  - 18.244.146.12
+  type: domain
+- added_at: '2025-06-19 14:29:29'
+  address: cloudflare.com
+  name: Cloudflare
+  resolved_ips:
+  - 104.16.132.229
+  - 104.16.133.229
+  type: domain
+- added_at: '2025-06-19 14:29:30'
+  address: digitalocean.com
+  name: DigitalOcean
+  resolved_ips:
+  - 104.19.173.68
+  - 104.19.174.68
+  type: domain
+- added_at: '2025-06-19 14:29:30'
+  address: linode.com
+  name: Linode
+  resolved_ips:
+  - 23.38.108.152
+  - 23.38.108.143
+  type: domain
+- added_at: '2025-06-19 14:29:31'
+  address: ovh.com
+  name: OVH
+  resolved_ips:
+  - 198.27.92.1
+  type: domain
+- added_at: '2025-06-19 14:29:31'
+  address: godaddy.com
+  name: GoDaddy
+  resolved_ips:
+  - 208.109.192.70
+  type: domain
+- added_at: '2025-06-19 14:29:31'
+  address: gcore.com
+  name: GCore
+  resolved_ips:
+  - 92.223.84.84
+  type: domain
+- added_at: '2025-06-19 14:29:31'
+  address: vultr.com
+  name: Vultr
+  resolved_ips:
+  - 108.61.13.174
+  type: domain
+- address: smotrim.ru
+  bypass_vpn: true
+  name: Smotrim
+  resolved_ips:
+  - 178.248.232.222
+  type: domain
+- address: vitrinabeat.ru
+  bypass_vpn: true
+  name: Smotrim.vitrinabeat
+  resolved_ips:
+  - 195.24.68.23
+  type: domain
+- address: mediavitrina.ru
+  bypass_vpn: true
+  name: Smotrim.mediavitrina.ru
+  resolved_ips:
+  - 10.1.1.92
+  - 10.1.8.82
+  - 10.1.1.94
+  - 10.1.8.81
+  - 10.1.1.93
+  - 10.1.8.83
+  type: domain
+- address: vitv.telecomid.ru
+  bypass_vpn: true
+  name: Smotrim.telecomid.ru
+  resolved_ips:
+  - 89.108.126.77
+  type: domain
+- address: tlprt.cloud
+  bypass_vpn: true
+  name: Smotrim.sla.tlprt.cloud
+  resolved_ips: []
+  type: domain
+- address: yandex.com
+  bypass_vpn: true
+  name: Yandex.com
+  resolved_ips:
+  - 77.88.44.55
+  - 5.255.255.77
+  - 77.88.55.88
+  type: domain
+- address: google.dev
+  bypass_vpn: false
+  name: Google.dev
+  resolved_ips:
+  - 216.239.32.27
+  type: domain
+- address: deepmind.google
+  bypass_vpn: false
+  name: Google deepmind
+  resolved_ips:
+  - 216.239.34.21
+  - 216.239.36.21
+  - 216.239.38.21
+  - 216.239.32.21
+  type: domain
+- address: google-analytics.com
+  bypass_vpn: false
+  name: Google-analytics
+  resolved_ips:
+  - 209.85.233.103
+  - 209.85.233.104
+  - 209.85.233.99
+  - 209.85.233.106
+  - 209.85.233.147
+  - 209.85.233.105
+  type: domain
+- address: googletagmanager.com
+  bypass_vpn: false
+  name: GoogleTagManager
+  resolved_ips:
+  - 173.194.221.97
+  type: domain
+- address: aistudio.google.com
+  bypass_vpn: false
+  name: GoogleAiDev
+  resolved_ips:
+  - 142.251.1.138
+  - 142.251.1.100
+  - 142.251.1.113
+  - 142.251.1.139
+  - 142.251.1.102
+  - 142.251.1.101
+  type: domain

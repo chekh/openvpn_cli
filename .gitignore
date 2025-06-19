@@ -71,4 +71,6 @@ configs/
 configs/base/*.ovpn
 configs/certs/*.pem
 configs/new_configs/*.ovpn
+
+# Exceptions
 !configs/addresses.yaml
